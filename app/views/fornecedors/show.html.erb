@@ -1,0 +1,60 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to fa_icon('chevron-left'), fornecedors_path, :class => "btn btn-default btn-lg",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Voltar"  %>
+
+<%= link_to fa_icon('pencil-square-o'), edit_fornecedor_path(@fornecedor), :class => "btn btn-default btn-lg",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Editar" %> 
+
+<p>
+  <strong>Nome:</strong>
+  <%= @fornecedor.nome %>
+</p>
+
+<p>
+  <strong>Cnpj:</strong>
+  <%= @fornecedor.cnpj %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @fornecedor.endereco %>
+</p>
+
+<p>
+  <strong>Bairro:</strong>
+  <%= @fornecedor.bairro %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @fornecedor.cidade %>
+</p>
+
+<p>
+  <strong>Uf:</strong>
+  <%= @fornecedor.uf %>
+</p>
+
+<p>
+  <strong>Pais:</strong>
+  <%= @fornecedor.pais %>
+</p>
+
+<!--
+<strong>Telefone(s):</strong>
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>DDD</th>
+      <th>Telefone</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fornecedor.telefone_fornecedors.each do |telefone| %>
+      <tr>
+        <td><%= telefone.ddd %></td>
+        <td><%= telefone.telefone %></td>
+    <% end %>
+  </tbody>
+</table>
+-->

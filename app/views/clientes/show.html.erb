@@ -1,0 +1,62 @@
+<p id="notice"><%= notice %></p>
+<%= link_to fa_icon('chevron-left'), clientes_path, :class => "btn btn-default btn-lg",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Voltar"  %>
+
+<%= link_to fa_icon('pencil-square-o'), edit_cliente_path(@cliente), :class => "btn btn-default btn-lg",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Editar" %> 
+
+<hr />
+
+<p>
+  <strong>Nome:</strong>
+  <%= @cliente.nome %>
+</p>
+
+<p>
+  <strong>Cnpj:</strong>
+  <%= @cliente.cnpj %>
+</p>
+
+<p>
+  <strong>Endereco:</strong>
+  <%= @cliente.endereco %>
+</p>
+
+<p>
+  <strong>Bairro:</strong>
+  <%= @cliente.bairro %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @cliente.cidade %>
+</p>
+
+<p>
+  <strong>Uf:</strong>
+  <%= @cliente.uf %>
+</p>
+
+<p>
+  <strong>Pais:</strong>
+  <%= @cliente.pais %>
+</p>
+
+<!--
+<strong>Telefone(s):</strong>
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>DDD</th>
+      <th>Telefone</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @cliente.telefone_clientes.each do |telefone| %>
+      <tr>
+        <td><%= telefone.ddd %></td>
+        <td><%= telefone.telefone %></td>
+    <% end %>
+  </tbody>
+</table>
+-->
+

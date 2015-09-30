@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Telefone Clientes</h1>
+
+<table class="table table-stripped">
+  <thead>
+    <tr>
+      <th>Ddd</th>
+      <th>Telefone</th>
+      <th>Cliente</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @telefone_clientes.each do |telefone_cliente| %>
+      <tr>
+        <td><%= telefone_cliente.ddd %></td>
+        <td><%= telefone_cliente.telefone %></td>
+        <td><%= telefone_cliente.Cliente %></td>
+        <td><%= link_to 'Show', telefone_cliente %></td>
+        <td><%= link_to 'Edit', edit_telefone_cliente_path(telefone_cliente) %></td>
+        <td><%= link_to 'Destroy', telefone_cliente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Telefone cliente', new_telefone_cliente_path %>

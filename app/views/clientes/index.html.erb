@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1><i class="fa fa-users"></i> Listagem de Clientes</h1>
+
+<table class="table table-stripped">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Cnpj</th>
+      <th>Endereco</th>
+      <th>Bairro</th>
+      <th>Cidade</th>
+      <th>Uf</th>
+      <th>Pais</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clientes.each do |cliente| %>
+      <tr>
+        <td><%= cliente.nome %></td>
+        <td><%= cliente.cnpj %></td>
+        <td><%= cliente.endereco %></td>
+        <td><%= cliente.bairro %></td>
+        <td><%= cliente.cidade %></td>
+        <td><%= cliente.uf %></td>
+        <td><%= cliente.pais %></td>
+        <td>
+          <%= link_to fa_icon('eye'), cliente, :class => "btn btn-default",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Ver mais dados" %>
+          <%= link_to fa_icon('pencil-square-o'), edit_cliente_path(cliente) , :class => "btn btn-default",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Editar" %>
+          <%= link_to fa_icon('times'), cliente, method: :delete, data: { confirm: 'Você tem certeza de apagar o '+cliente.nome+'?'}, :class => "btn btn-danger",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Excluir" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to fa_icon('user-plus', text: "Novo Cliente"), new_cliente_path, :class => "btn btn-success" %>

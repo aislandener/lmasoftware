@@ -1,0 +1,41 @@
+<%= form_for(@contas_receber) do |f| %>
+  <% if @contas_receber.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@contas_receber.errors.count, "error") %> prohibited this contas_receber from being saved:</h2>
+
+      <ul>
+      <% @contas_receber.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :dataEmissao %><br>
+    <%= f.text_field :dataEmissao %>
+  </div>
+  <div class="field">
+    <%= f.label :valor %><br>
+    <%= f.text_field :valor %>
+  </div>
+  <div class="field">
+    <%= f.label :vencimento %><br>
+    <%= f.text_field :vencimento %>
+  </div>
+  <div class="field">
+    <%= f.label :juros %><br>
+    <%= f.text_field :juros %>
+  </div>
+  <div class="field">
+    <%= f.label :multa %><br>
+    <%= f.text_field :multa %>
+  </div>
+  <div class="field">
+    <%= f.label :Cliente_id %><br>
+    <%= f.text_field :Cliente_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

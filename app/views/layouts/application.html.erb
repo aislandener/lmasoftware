@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lmasoftware</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">LMA Software</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav"> 
+        <ul class="nav navbar-nav navbar-right"> 
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lista <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'Cliente', clientes_path %></li>
+            <li><%= link_to 'Fornecedor', fornecedors_path %></li>
+            <li role="separator" class="divider"></li>
+            <li><%= link_to 'Contas a Pagar', contas_pagars_path %></li>
+            <li><%= link_to 'Contas a Receber', contas_recebers_path %></li> 
+          </ul>
+        </li>
+      </ul>
+   
+      <ul class="nav navbar-nav navbar-right"> 
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to 'Cliente', new_cliente_path %></li>
+            <li><%= link_to 'Fornecedor', new_fornecedor_path %></li>
+            <li role="separator" class="divider"></li>
+            <li><%= link_to 'Contas a Pagar', new_contas_pagar_path %></li>
+            <li><%= link_to 'Contas a Receber', new_contas_receber_path %></li> 
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="corpo">
+	<%= yield %>
+</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ddd:</strong>
+  <%= @telefone_cliente.ddd %>
+</p>
+
+<p>
+  <strong>Telefone:</strong>
+  <%= @telefone_cliente.telefone %>
+</p>
+
+<p>
+  <strong>Cliente:</strong>
+  <%= @telefone_cliente.Cliente %>
+</p>
+
+<%= link_to 'Edit', edit_telefone_cliente_path(@telefone_cliente) %> |
+<%= link_to 'Back', telefone_clientes_path %>

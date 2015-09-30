@@ -1,0 +1,46 @@
+<%= form_for(@fornecedor) do |f| %>
+  <% if @fornecedor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@fornecedor.errors.count, "error") %> prohibited this fornecedor from being saved:</h2>
+ 
+      <ul>
+      <% @fornecedor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :nome %><br>
+    <%= f.text_field :nome, :class => 'form-control' %>
+  </div>
+  <div class="control-group">
+    <%= f.label :cnpj %><br>
+    <%= f.text_field :cnpj, :class => 'form-control' %>
+  </div>
+  <div class="control-group">
+    <%= f.label :endereco %><br>
+    <%= f.text_field :endereco, :class => 'form-control' %>
+  </div>
+  <div class="control-group">
+    <%= f.label :bairro %><br>
+    <%= f.text_field :bairro, :class => 'form-control' %>
+  </div>
+  <div class="control-group">
+    <%= f.label :cidade %><br>
+    <%= f.text_field :cidade, :class => 'form-control' %>
+  </div>
+  <div class="control-group">
+    <%= f.label :uf %><br>
+    <%= f.text_field :uf, :class => 'form-control' %>
+  </div>
+  <div class="control-group">
+    <%= f.label :pais %><br>
+    <%= f.text_field :pais, :class => 'form-control' %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Salvar", :class => "btn btn-primary btn-lg" %>
+    <%= link_to fa_icon('chevron-left'), fornecedors_path, :class => "btn btn-warning btn-lg",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Voltar"  %>
+  </div>
+<% end %>
