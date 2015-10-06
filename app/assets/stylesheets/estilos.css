@@ -12,3 +12,6 @@ body{
 .actions{
 	margin-top: 10px;
 }
+input[type="submit"] {
+   font-family: FontAwesome, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}

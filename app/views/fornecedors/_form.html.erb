@@ -40,7 +40,8 @@
     <%= f.text_field :pais, :class => 'form-control' %>
   </div>
   <div class="actions">
-    <%= f.submit "Salvar", :class => "btn btn-primary btn-lg" %>
+    <%= f.submit "Salvar", :id => 'salvar', :class => "btn btn-success btn-lg" %>
     <%= link_to fa_icon('chevron-left'), fornecedors_path, :class => "btn btn-warning btn-lg",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Voltar"  %>
   </div>
 <% end %>
+
