@@ -4,7 +4,8 @@ class ClientesController < ApplicationController
   # GET /clientes
   # GET /clientes.json
   def index
-    @clientes = Cliente.all
+    pesquisa = params[:p]
+    @clientes = Cliente.por_nome(pesquisa)
   end
 
   # GET /clientes/1

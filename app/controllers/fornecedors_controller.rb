@@ -4,7 +4,8 @@ class FornecedorsController < ApplicationController
   # GET /fornecedors
   # GET /fornecedors.json
   def index
-    @fornecedors = Fornecedor.all
+    pesquisa = params[:p]
+    @fornecedors = Fornecedor.por_nome(pesquisa)
   end
 
   # GET /fornecedors/1

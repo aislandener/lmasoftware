@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to fa_icon('chevron-left'), contas_pagars_path, :class => "btn btn-default btn-lg",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Voltar"  %>
+
+<%= link_to fa_icon('pencil-square-o'), edit_contas_pagar_path(@contas_pagar), :class => "btn btn-default btn-lg",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Editar" %> 
+
 <p>
   <strong>Dataemissao:</strong>
   <%= @contas_pagar.dataEmissao %>
@@ -27,8 +31,5 @@
 
 <p>
   <strong>Fornecedor:</strong>
-  <%= @contas_pagar.Fornecedor %>
+  <%= @contas_pagar.Fornecedor.nome %>
 </p>
-
-<%= link_to 'Edit', edit_contas_pagar_path(@contas_pagar) %> |
-<%= link_to 'Back', contas_pagars_path %>

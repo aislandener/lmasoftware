@@ -1,37 +1,44 @@
+<h1><i class="fa fa-credit-card"></i>Contas a Pagar</h1>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Contas Pagars</h1>
+<div class="row">
+  <div class="col-xs-8">
+<%= link_to fa_icon('user-plus', text: "Nova Conta a Pagar"), 
+new_contas_pagar_path, :class => "btn btn-success" %>
+  </div>
+</div>
 
 <table class="table table-stripped">
   <thead>
     <tr>
-      <th>Dataemissao</th>
+      <th>Fornecedor</th>
+      <th>Datae de emissao</th>
       <th>Valor</th>
       <th>Vencimento</th>
       <th>Juros</th>
       <th>Multa</th>
-      <th>Fornecedor</th>
-      <th colspan="3"></th>
+      <th>Ações</th>
     </tr>
   </thead>
 
   <tbody>
     <% @contas_pagars.each do |contas_pagar| %>
       <tr>
+        <td><%= contas_pagar.Fornecedor.nome %></td>
         <td><%= contas_pagar.dataEmissao %></td>
         <td><%= contas_pagar.valor %></td>
         <td><%= contas_pagar.vencimento %></td>
         <td><%= contas_pagar.juros %></td>
         <td><%= contas_pagar.multa %></td>
-        <td><%= contas_pagar.Fornecedor.nome %></td>
-        <td><%= link_to 'Show', contas_pagar %></td>
-        <td><%= link_to 'Edit', edit_contas_pagar_path(contas_pagar) %></td>
-        <td><%= link_to 'Destroy', contas_pagar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to fa_icon('eye'), contas_pagar, :class => "btn btn-default",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Ver mais dados" %>
+          <%= link_to fa_icon('pencil-square-o'), edit_contas_pagar_path(contas_pagar) , :class => "btn btn-default",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Editar" %>
+          <%= link_to fa_icon('times'), contas_pagar, method: :delete, data: { confirm: 'Você tem certeza que quer apagar uma conta a pagar?'}, :class => "btn btn-danger",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Excluir" %></td>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Contas pagar', new_contas_pagar_path %>

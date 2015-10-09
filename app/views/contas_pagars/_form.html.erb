@@ -11,31 +11,37 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :dataEmissao %><br>
-    <%= f.text_field :dataEmissao %>
+  <div class="control-group">
+    <%= f.label :Fornecedor_id, :class => 'control-label' %>
+    <div class="controls form-inline">
+      <%= f.collection_select :Fornecedor_id, Fornecedor.all, :id, :nome, { include_blank: true }, class: 'form-control' %>
+      <%= link_to fa_icon('user-plus', text: "Novo Fornecedor"), new_fornecedor_path, :class => "btn btn-success" %>
+    </div>
+    <%= error_span(@contas_pagar[:Fornecedor_id]) %>
+
   </div>
-  <div class="field">
+  <div class="control-group">
+    <%= f.label "Data de Emissão" %><br>
+    <%= f.date_field:dataEmissao, :class => 'form-control' %>
+  </div>
+  <div class="control-group">
     <%= f.label :valor %><br>
-    <%= f.text_field :valor %>
+    <%= f.text_field :valor, :class => 'form-control' %>
   </div>
-  <div class="field">
+  <div class="control-group">
     <%= f.label :vencimento %><br>
-    <%= f.text_field :vencimento %>
+    <%= f.text_field :vencimento, :class => 'form-control' %>
   </div>
-  <div class="field">
+  <div class="control-group">
     <%= f.label :juros %><br>
-    <%= f.text_field :juros %>
+    <%= f.text_field :juros, :class => 'form-control' %>
   </div>
-  <div class="field">
+  <div class="control-group">
     <%= f.label :multa %><br>
-    <%= f.text_field :multa %>
-  </div>
-  <div class="field">
-    <%= f.label :Fornecedor_id %><br>
-    <%= f.text_field :Fornecedor_id %>
+    <%= f.text_field :multa, :class => 'form-control' %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Salvar", :id => 'salvar', :class => "btn btn-success btn-lg" %>
+    <%= link_to fa_icon('chevron-left'), contas_pagars_path, :class => "btn btn-warning btn-lg",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Voltar"  %>
   </div>
 <% end %>

@@ -1,37 +1,39 @@
+<h1><i class="fa fa-credit-card"></i>Contas a Receber</h1>
+
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Contas Recebers</h1>
+<%= link_to fa_icon('user-plus', text: "Nova Conta a Pagar"), 
+  new_contas_receber_path, :class => "btn btn-success" %>
 
 <table class="table table-stripped">
   <thead>
     <tr>
+      <th>Cliente</th>
       <th>Dataemissao</th>
       <th>Valor</th>
       <th>Vencimento</th>
       <th>Juros</th>
       <th>Multa</th>
-      <th>Cliente</th>
-      <th colspan="3"></th>
+      <th>Ações</th>
     </tr>
   </thead>
 
   <tbody>
     <% @contas_recebers.each do |contas_receber| %>
       <tr>
+        <td><%= contas_receber.Cliente.nome %></td>
         <td><%= contas_receber.dataEmissao %></td>
         <td><%= contas_receber.valor %></td>
         <td><%= contas_receber.vencimento %></td>
         <td><%= contas_receber.juros %></td>
         <td><%= contas_receber.multa %></td>
-        <td><%= contas_receber.Cliente %></td>
-        <td><%= link_to 'Show', contas_receber %></td>
-        <td><%= link_to 'Edit', edit_contas_receber_path(contas_receber) %></td>
-        <td><%= link_to 'Destroy', contas_receber, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td>
+          <%= link_to fa_icon('eye'), contas_receber, :class => "btn btn-default",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Ver mais dados" %>
+          <%= link_to fa_icon('pencil-square-o'), edit_contas_receber_path(contas_receber) , :class => "btn btn-default",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Editar" %>
+          <%= link_to fa_icon('times'), contas_receber, method: :delete, data: { confirm: 'Você tem certeza que quer apagar uma conta a receber?'}, :class => "btn btn-danger",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Excluir" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Contas receber', new_contas_receber_path %>
