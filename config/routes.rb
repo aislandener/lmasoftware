@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :usuarios #path_names: {sign_out: 'logout',registration: 'register'}
   root 'home#index'
 
   get 'home/index'
@@ -10,6 +11,8 @@ Rails.application.routes.draw do
   resources :clientes
   resources :telefone_fornecedors
   resources :fornecedors
+
+  #devise_for :usuarios, path: "auth", path_names: { sign_in: 'login',  }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

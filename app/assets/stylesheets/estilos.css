@@ -15,3 +15,5 @@ body{
 input[type="submit"] {
    font-family: FontAwesome, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
+
+.botao{float: left; margin-right: 10px;}
