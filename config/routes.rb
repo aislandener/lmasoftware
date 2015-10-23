@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  root 'home#index'
+
+  get 'home/index'
+
   resources :contas_recebers
   resources :contas_pagars
   resources :telefone_clientes

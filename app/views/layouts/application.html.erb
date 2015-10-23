@@ -20,8 +20,8 @@
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav"> 
-        <ul class="nav navbar-nav navbar-right"> 
+      <ul class="nav navbar-nav">
+        <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lista <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -29,12 +29,12 @@
             <li><%= link_to 'Fornecedor', fornecedors_path %></li>
             <li role="separator" class="divider"></li>
             <li><%= link_to 'Contas a Pagar', contas_pagars_path %></li>
-            <li><%= link_to 'Contas a Receber', contas_recebers_path %></li> 
+            <li><%= link_to 'Contas a Receber', contas_recebers_path %></li>
           </ul>
         </li>
       </ul>
-   
-      <ul class="nav navbar-nav navbar-right"> 
+
+      <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro <span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -42,7 +42,7 @@
             <li><%= link_to 'Fornecedor', new_fornecedor_path %></li>
             <li role="separator" class="divider"></li>
             <li><%= link_to 'Contas a Pagar', new_contas_pagar_path %></li>
-            <li><%= link_to 'Contas a Receber', new_contas_receber_path %></li> 
+            <li><%= link_to 'Contas a Receber', new_contas_receber_path %></li>
           </ul>
         </li>
       </ul>
@@ -51,6 +51,12 @@
 </nav>
 
 <div class="corpo">
+  <% if alert.present? %>
+    <div class="notice"><%= notice %></div>
+  <% end %>
+  <% if alert.present? %>
+    <div class="alert"><%= alert %></div>
+  <% end %>
 	<%= yield %>
 </div>
 </body>
