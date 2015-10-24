@@ -1,7 +1,9 @@
-<p id="notice"><%= notice %></p>
+<%= link_to fa_icon('chevron-left'), contas_recebers_path, :class => "btn btn-default btn-lg",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Voltar"  %>
+
+<%= link_to fa_icon('pencil-square-o'), edit_contas_receber_path(@contas_receber), :class => "btn btn-default btn-lg",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Editar" %>
 
 <p>
-  <strong>Dataemissao:</strong>
+  <strong>Data de Emissao:</strong>
   <%= @contas_receber.dataEmissao %>
 </p>
 
@@ -27,8 +29,5 @@
 
 <p>
   <strong>Cliente:</strong>
-  <%= @contas_receber.Cliente %>
+  <%= @contas_receber.Cliente.nome %>
 </p>
-
-<%= link_to 'Edit', edit_contas_receber_path(@contas_receber) %> |
-<%= link_to 'Back', contas_recebers_path %>

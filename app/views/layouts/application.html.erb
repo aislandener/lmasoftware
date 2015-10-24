@@ -1,7 +1,8 @@
 <!DOCTYPE html>
+<% url = request.fullpath %>
 <html>
 <head>
-  <title>Lmasoftware</title>
+  <title>LMDA software</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -16,13 +17,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "LMA Software", root_path, :class =>"navbar-brand"%>
+      <%= link_to fa_icon('home',text: "LMAD Software") , root_path, :class =>"navbar-brand"%>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <ul class="nav navbar-nav navbar-left">
-        <li class="dropdown">
+        <li <%= url == clientes_path || url == fornecedors_path || url == contas_pagars_path || url == contas_recebers_path ? 'class=active' : '' %>>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lista <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><%= link_to 'Cliente', clientes_path %></li>
@@ -35,7 +36,7 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-left">
-        <li class="dropdown">
+        <li <%= url == new_cliente_path || url == new_fornecedor_path || url == new_contas_pagar_path || url == new_contas_receber_path ? 'class=active' : '' %>>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Cadastro <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><%= link_to 'Cliente', new_cliente_path %></li>
