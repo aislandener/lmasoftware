@@ -55,6 +55,6 @@ gem "font-awesome-rails"
 
 gem 'devise'
 
+#Para fazer sistema de controle de usuario
 gem 'cancancan'
-
 gem 'rolify'
