@@ -47,17 +47,14 @@ end
 
 #Nossas Gems
 
-# Bootstrap
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
 
-# Font-Awesome
 gem "font-awesome-rails"
 
-# Devise
 gem 'devise'
 
-#Parat fazer sistema de controle de usuario
 gem 'cancancan'
+
 gem 'rolify'
