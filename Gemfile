@@ -54,3 +54,7 @@ gem "twitter-bootstrap-rails"
 gem "font-awesome-rails"
 
 gem 'devise'
+
+gem 'cancancan'
+
+gem 'rolify'
