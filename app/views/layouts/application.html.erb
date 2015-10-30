@@ -58,7 +58,9 @@
   </div>
 </nav>
 
-<div class="corpo">
+
+  <div <%= url == new_usuario_session_path ? 'class=login' : 'class=corpo' %> >
+
   <% if alert.present? then %>
     <div class="notice"><%= notice %></div>
   <% end %>
