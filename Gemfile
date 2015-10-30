@@ -58,6 +58,6 @@ gem "font-awesome-rails"
 # Devise
 gem 'devise'
 
-#Parat fazer sistema de controle de usuario
+#Para fazer sistema de controle de usuario
 gem 'cancancan'
 gem 'rolify'
