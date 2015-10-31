@@ -31,3 +31,8 @@ input[type="submit"] {
 	padding: 30px;
 	margin-top: 7%;
 }
+
+.alert-info{
+	border-left: 3px solid #666;
+	padding: 6px;
+}

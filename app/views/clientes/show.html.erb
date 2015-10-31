@@ -1,4 +1,7 @@
-<p id="notice"><%= notice %></p>
+<% if notice.present? then %>
+  <p id="notice" class=" alert alert-info"><%= notice %></p>
+<% end %>
+
 <%= link_to fa_icon('chevron-left'), clientes_path, :class => "btn btn-default btn-lg",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Voltar"  %>
 
 <%= link_to fa_icon('pencil-square-o'), edit_cliente_path(@cliente), :class => "btn btn-default btn-lg",  "data-toggle" => "tooltip","data-placement" => "top", :title => "Editar" %> 

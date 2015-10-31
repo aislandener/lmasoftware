@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<% if notice.present? then %>
+  <p id="notice" class=" alert alert-info"><%= notice %></p>
+<% end %>
 
 <h1>Listing Telefone Fornecedors</h1>
 

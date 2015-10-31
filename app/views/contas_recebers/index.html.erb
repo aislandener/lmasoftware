@@ -1,6 +1,8 @@
 <h1><i class="fa fa-credit-card"></i>Contas a Receber</h1>
 
-<p id="notice"><%= notice %></p>
+<% if notice.present? then %>
+  <p id="notice" class=" alert alert-info"><%= notice %></p>
+<% end %>
 
 <%= link_to fa_icon('user-plus', text: "Nova Conta a Pagar"), 
   new_contas_receber_path, :class => "btn btn-success" %>

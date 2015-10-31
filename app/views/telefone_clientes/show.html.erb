@@ -1,7 +1,9 @@
-<p id="notice"><%= notice %></p>
+<% if notice.present? then %>
+  <p id="notice" class=" alert alert-info"><%= notice %></p>
+<% end %>
 
 <p>
-  <strong>Ddd:</strong>
+  <strong>DDD:</strong>
   <%= @telefone_cliente.ddd %>
 </p>
 
