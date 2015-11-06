@@ -65,3 +65,4 @@ gem 'rolify'
 
 #paginacao
 gem 'kaminari'
+gem 'will_paginate', '~> 3.0.6'

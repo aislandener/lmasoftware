@@ -5,7 +5,7 @@ class ClientesController < ApplicationController
   # GET /clientes.json
   def index
     pesquisa = params[:p]
-    @clientes = Cliente.order("nome").page(params[:page].per(4)
+    @clientes = Cliente.paginate(:page => params[:page]).order('id DESC')
   end
 
   # GET /clientes/1

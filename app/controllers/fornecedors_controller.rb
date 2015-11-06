@@ -5,7 +5,7 @@ class FornecedorsController < ApplicationController
   # GET /fornecedors.json
   def index
     pesquisa = params[:p]
-    @fornecedors = Fornecedor.por_nome(pesquisa)
+    @fornecedors = Fornecedor.paginate(:page => params[:page]).order('id DESC')
   end
 
   # GET /fornecedors/1

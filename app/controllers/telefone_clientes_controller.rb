@@ -4,7 +4,7 @@ class TelefoneClientesController < ApplicationController
   # GET /telefone_clientes
   # GET /telefone_clientes.json
   def index
-    @telefone_clientes = TelefoneCliente.all
+    @telefone_clientes = TelefoneCliente.paginate(:page => params[:page]).order('id DESC')
   end
 
   # GET /telefone_clientes/1

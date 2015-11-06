@@ -4,7 +4,7 @@ class ContasRecebersController < ApplicationController
   # GET /contas_recebers
   # GET /contas_recebers.json
   def index
-    @contas_recebers = ContasReceber.all
+    @contas_recebers = ContasReceber.paginate(:page => params[:page]).order('id DESC')
   end
 
   # GET /contas_recebers/1

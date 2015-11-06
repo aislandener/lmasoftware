@@ -4,7 +4,7 @@ class ContasPagarsController < ApplicationController
   # GET /contas_pagars
   # GET /contas_pagars.json
   def index
-    @contas_pagars = ContasPagar.all
+    @contas_pagars = ContasPagar.paginate(:page => params[:page]).order('id DESC')
   end
 
   # GET /contas_pagars/1

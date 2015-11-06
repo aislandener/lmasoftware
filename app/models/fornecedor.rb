@@ -6,4 +6,6 @@ class Fornecedor < ActiveRecord::Base
 		where('nome LIKE ?',"%#{nome}%")
 	}
 
+	self.per_page = 5
+
 end

@@ -7,4 +7,6 @@ class Role < ActiveRecord::Base
             :allow_nil => true
 
   scopify
+
+  self.per_page = 5
 end
