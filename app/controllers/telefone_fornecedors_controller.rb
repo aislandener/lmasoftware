@@ -4,7 +4,7 @@ class TelefoneFornecedorsController < ApplicationController
   # GET /telefone_fornecedors
   # GET /telefone_fornecedors.json
   def index
-    @telefone_fornecedors = TelefoneFornecedor.paginate(:page => params[:page]).order('id DESC')
+    @telefone_fornecedors = TelefoneFornecedor.paginate(:page => params[:page]).order('id DESC').por_nome(pesquisa)
   end
 
   # GET /telefone_fornecedors/1

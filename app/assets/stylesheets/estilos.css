@@ -4,6 +4,8 @@ body{
 	opacity: 0.9;
 }
 
+hr{margin-top: -20px;}
+
 .corpo{
 	margin: 20px;
 	padding: 13px;

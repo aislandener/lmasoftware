@@ -1,4 +1,8 @@
 pt-BR:
+  will_paginate:
+    previous_label: "&#8592; Voltar"
+    next_label: "Próximo &#8594;"
+    page_gap: "&hellip;"
   date:
     abbr_day_names:
     - Dom

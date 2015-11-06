@@ -59,7 +59,7 @@
 </nav>
 
 
-  <div <%= url == root_path || url == home_index_path || url == contas_recebers_path || url == new_contas_receber_path  || url == clientes_path || url == new_cliente_path || url == fornecedors_path || url == new_fornecedor_path || url == contas_pagars_path || url == new_contas_pagar_path ? 'class=corpo' : 'class=login' %> >
+  <div <%= url == new_usuario_session_path || url == usuario_session_path || url == destroy_usuario_session_path || url == usuario_password_path  || url == new_usuario_password_path || url == edit_usuario_password_path || url == cancel_usuario_registration_path || url == usuario_registration_path || url == new_usuario_registration_path || url == edit_usuario_registration_path ? 'class=login' : 'class=corpo' %> >
 
   <% if alert.present? then %>
     <div class="notice alert-info"><%= notice %></div>
