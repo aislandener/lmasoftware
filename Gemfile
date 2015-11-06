@@ -61,3 +61,7 @@ gem 'devise'
 #Para fazer sistema de controle de usuario
 gem 'cancancan'
 gem 'rolify'
+
+
+#paginacao
+gem 'kaminari'
