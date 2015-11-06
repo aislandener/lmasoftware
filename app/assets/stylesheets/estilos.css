@@ -143,3 +143,14 @@ input[type="submit"] {
     margin-right: 1em; }
   .flickr_pagination .next_page {
     margin-left: 1em; }
+
+
+footer{
+  padding: 8px;
+  position: fixed;
+  bottom: 0px;
+  background: #333;
+  width: 100%;
+  color: white;
+  text-align: center;
+}

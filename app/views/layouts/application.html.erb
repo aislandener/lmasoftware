@@ -59,7 +59,7 @@
 </nav>
 
 
-  <div <%= url == new_usuario_session_path || url == usuario_session_path || url == destroy_usuario_session_path || url == usuario_password_path  || url == new_usuario_password_path || url == edit_usuario_password_path || url == cancel_usuario_registration_path || url == usuario_registration_path || url == new_usuario_registration_path || url == edit_usuario_registration_path ? 'class=login' : 'class=corpo' %> >
+<div <%= url == new_usuario_session_path || url == usuario_session_path || url == destroy_usuario_session_path || url == usuario_password_path  || url == new_usuario_password_path || url == edit_usuario_password_path || url == cancel_usuario_registration_path || url == usuario_registration_path || url == new_usuario_registration_path || url == edit_usuario_registration_path ? 'class=login' : 'class=corpo' %> >
 
   <% if alert.present? then %>
     <div class="notice alert-info"><%= notice %></div>
@@ -69,5 +69,9 @@
   <% end %>
 	<%= yield %>
 </div>
+
+<footer>
+  Grupo LMAD - Ruby on Rails. 2015
+</footer>
 </body>
 </html>
