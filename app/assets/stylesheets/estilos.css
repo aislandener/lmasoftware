@@ -146,11 +146,11 @@ input[type="submit"] {
 
 
 footer{
-  padding: 8px;
+  padding: 7px;
   position: fixed;
   bottom: 0px;
   background: #333;
   width: 100%;
   color: white;
   text-align: center;
-}
+} 
