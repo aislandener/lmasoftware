@@ -1,5 +1,9 @@
 == README
 
+{<img src="https://travis-ci.org/aislandener/lmasoftware.svg?branch=page" alt="Build Status" />}[https://travis-ci.org/aislandener/lmasoftware]
+{<img src="https://codeclimate.com/github/aislandener/lmasoftware/badges/gpa.svg" />}[https://codeclimate.com/github/aislandener/lmasoftware]
+{<img src="https://codeclimate.com/github/aislandener/lmasoftware/badges/coverage.svg" />}[https://codeclimate.com/github/aislandener/lmasoftware/coverage]
+{<img src="https://hakiri.io/github/aislandener/lmasoftware/master.svg" alt="security" />}[https://hakiri.io/github/aislandener/lmasoftware/master]
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
